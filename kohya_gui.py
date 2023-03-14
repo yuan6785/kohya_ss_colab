@@ -53,7 +53,7 @@ def UI(**kwargs):
     if username and password:
         launch_kwargs["auth"] = (username, password)
     print(111111)
-    os.environ
+    print(os.environ)
     interface.launch(**launch_kwargs, share=True, inline=False, inbrowser=False, debug=True)
 
 if __name__ == '__main__':
