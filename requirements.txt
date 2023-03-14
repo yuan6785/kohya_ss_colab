@@ -21,6 +21,11 @@ fairscale==0.4.13
 # tensorflow<2.11
 tensorflow==2.10.1
 huggingface-hub==0.12.0
-xformers
 # for kohya_ss library
+# modify by yx---python==3.9.16,  gpu版本: NVIDIA-SMI 525.85.12 Driver Version: 525.85.12 CUDA Version: 12.0 gpu型号: tesla t4
+xformers==0.0.16
+torch==1.13.1+cu116
+torchtext==0.14.1
+torchvision==0.14.1+cu116
+torchaudio==0.13.1+cu116
 .
