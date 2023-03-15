@@ -30,27 +30,27 @@ def get_file_path(
 ):
     current_file_path = file_path
     # print(f'current file path: {current_file_path}')
-
-    initial_dir, initial_file = get_dir_and_file(file_path)
-    print('debug 11111', file_path, defaultextension, extension_name)
-    root = Tk()
-    print('debug 222222')
-    root.wm_attributes('-topmost', 1)
-    print('debug 333333')
-    root.withdraw()
-    print('debug 444444')
-    file_path = filedialog.askopenfilename(
-        filetypes=(
-            (f'{extension_name}', f'{defaultextension}'),
-            ('All files', '*'),
-        ),
-        defaultextension=defaultextension,
-        initialfile=initial_file,
-        initialdir=initial_dir,
-    )
-    print('debug 555555')
-    root.destroy()
-    print('debug 666666')
+    if 0: #colab用不到这个，去掉---modify  by yx
+        initial_dir, initial_file = get_dir_and_file(file_path)
+        print('debug 11111', file_path, defaultextension, extension_name)
+        root = Tk()
+        print('debug 222222')
+        root.wm_attributes('-topmost', 1)
+        print('debug 333333')
+        root.withdraw()
+        print('debug 444444')
+        file_path = filedialog.askopenfilename(
+            filetypes=(
+                (f'{extension_name}', f'{defaultextension}'),
+                ('All files', '*'),
+            ),
+            defaultextension=defaultextension,
+            initialfile=initial_file,
+            initialdir=initial_dir,
+        )
+        print('debug 555555')
+        root.destroy()
+        print('debug 666666')
     if file_path == '':
         file_path = current_file_path
 
